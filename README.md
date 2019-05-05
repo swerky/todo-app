@@ -20,6 +20,9 @@ Made by Sorin Paun for [PowerCoders Lausanne](https://powercoders.org).
 * Save list (to the localStorage)
 * On load, check localStorage for saved data
 
+### See it in action here:<br>
+https://powercoders-lausanne.github.io/todo-app/
+
 
 ### Acknowledgments
 HTML/CSS from http://todomvc.com/ (with some minor changes).<br>
