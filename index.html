@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Todos - by SO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+  <!-- MAIN TITLE -->
+  <h1 class="main-title">todos</h1>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+
+    <!-- TODO APP SECTION -->
+    <section class="todoapp ">
+
+      <!-- HEADER-->
+      <header class="header">
+
+        <!-- TOGGLE ALL INPUT -->
+        <input id="toggle-all" class="toggle-all" onclick="handlers.toggleAll()" type="checkbox">
+        <label for="toggle-all">Mark all as complete/uncomplete</label>
+        
+        <!-- ADD TODO INPUT -->
+        <input id="add-todo" class="new-todo" placeholder="What needs to be done?" autofocus="">
+      
+      </header>
+
+
+      <!-- TODO LIST - Will be filled by JavaScript ! -->
+      <ul id="todo-list" class="todo-list">
+        <!-- an element will be somethig like this:
+        <li data-id="0" class="completed">
+          <div class="view">
+            <input class="toggle" type="checkbox">
+            <label>First</label>
+            <button class="destroy"></button>
+          </div>
+        </li>
+        -->
+      </ul>
+
+
+      <!-- UTILITY BUTTONS -->
+      <footer id="utilities" class="utilities">
+
+        <!-- ITEMS LEFT COUNTER -->
+        <span id="todo-count" class="todo-count"><strong>0</strong> item<span id="s">s</span> left</span>
+        
+        <!-- FILTERS-->
+        <ul id="filters" class="filters">
+          <li><a id="filter-all" href="#/" class="filter selected" onclick="utilities.showAll();">All</a></li>
+          <li><a id="filter-active" href="#/active" class="filter"  onclick="utilities.showActive();">Active</a></li>
+          <li><a id="filter-completed" href="#/completed" class="filter" onclick="utilities.showCompleted();">Completed</a></li>
+          <li id="sample-data" class="hide"><a href="#/completed" onclick="todoList.addSampleData();">Add sample data</a></li>
+        </ul>
+        
+        <!-- MISC BUTTONS -->
+        <button id="save-list" class="save-list hide">SAVE</button>
+        <!-- <button class="clear-completed">Clear completed</button> -->
+  
+      </footer>
+
+    </section>
+
+
+    <!-- MANUAL INPUT VARIANTE -->
+    <section class="manual-input">
+
+      <h1>Todo Handlers</h1>
+      <h2>A "manual" input variante</h2>
+  
+      <!-- ADD TODO -->
+      <div class="row">
+        <input class="text long" id="addTodoTextInput" type="text" placeholder="Text...">
+        <button onclick="handlersVariante.addTodo()">Add Todo</button>
+      </div>
+  
+      <!-- CHANGE TODO -->
+      <div class="row">
+        <input class="index" id="changeTodoPositionInput" type="number" placeholder="Index..."></input>
+        <input class="text" id="changeTodoTextInput" type="text" placeholder="Text..."></input>
+        <button onclick="handlersVariante.changeTodo()">Change Todo</button>
+      </div>
+  
+      <!-- TOGGLE TODO -->
+      <div class="row">
+        <input class="index" id="toggleCompletedPositionInput" type="number" placeholder="Index..."></input>
+        <button onclick="handlersVariante.toggleCompleted()" class="M0">Toggle Item</button>
+      </div>
+  
+      <!-- TOGGLE ALL TODOs -->
+      <div class="row">
+        <button onclick="handlersVariante.toggleAll()" class="M0">Toggle All</button>
+      </div>
+  
+  
+      <!-- DELETE TODO -->
+      <div class="row">
+        <input class="index" id="deleteTodoPositionInput" type="number" placeholder="Index..."></input>
+        <button onclick="handlersVariante.deleteTodo()" class="M0">Delete Item</button>
+      </div>
+  
+    </section>
+
+  </main>
+
+
+  <!-- LINKED SCRIPTS -->
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
