@@ -23,4 +23,4 @@ Made by Sorin Paun for [PowerCoders Lausanne](https://powercoders.org).
 
 ### Acknowledgments
 HTML/CSS from http://todomvc.com/ (with some minor changes).<br>
-Basic functionnality idea from Gordon Zhu course "Practical JavaScript".
+Basic functionnality idea from Gordon Zhu course [Practical JavaScript](https://watchandcode.com/p/practical-javascript).
